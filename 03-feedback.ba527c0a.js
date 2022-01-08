@@ -4,4 +4,4 @@ var t=arguments[3],n="Expected a function",e=NaN,i="[object Symbol]",r=/^\s+|\s+
 },{}],"TTyb":[function(require,module,exports) {
 "use strict";var e=t(require("lodash.throttle"));function t(e){return e&&e.__esModule?e:{default:e}}const a="feedback-form-state",l=document.querySelector(".feedback-form");function r(e){e.preventDefault();const t=e.currentTarget.elements.email.value.trim(),r=e.currentTarget.elements.message.value.trim(),s={email:t,message:r};if(!t||!r)return alert("Fill in all fields of the form");console.log(s),l.reset(),localStorage.removeItem(a)}function s(e){const t={email:l.elements.email.value.trim(),message:l.elements.message.value.trim()};t[e.target.name]=e.target.value,localStorage.setItem(a,JSON.stringify(t))}function n(){const e=localStorage.getItem(a);e&&(l.email.value=JSON.parse(e).email,l.message.value=JSON.parse(e).message)}l.addEventListener("submit",r),l.addEventListener("input",(0,e.default)(s,500)),n();
 },{"lodash.throttle":"FNyO"}]},{},["TTyb"], null)
-//# sourceMappingURL=/parcel-project-template/03-feedback.ba527c0a.js.map
+//# sourceMappingURL=/goit-js-hw-08/03-feedback.ba527c0a.js.map
